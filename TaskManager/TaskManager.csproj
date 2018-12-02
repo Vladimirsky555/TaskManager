@@ -65,12 +65,19 @@
     <Compile Include="Service\IServiceHolder.cs" />
     <Compile Include="Storage\IStorage.cs" />
     <Compile Include="Storage\Storage.cs" />
+    <Compile Include="UIFragment\ClassInt.cs" />
     <Compile Include="UIFragment\IUIPart.cs" />
     <Compile Include="UIFragment\IntControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIFragment\IntControl.Designer.cs">
       <DependentUpon>IntControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIFragment\FloatControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIFragment\FloatControl.Designer.cs">
+      <DependentUpon>FloatControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UIBuilder.cs">
       <SubType>Form</SubType>
@@ -96,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="UIFragment\IntControl.resx">
       <DependentUpon>IntControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIFragment\FloatControl.resx">
+      <DependentUpon>FloatControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
