@@ -81,6 +81,12 @@
     <Compile Include="UIFragment\FloatControl.Designer.cs">
       <DependentUpon>FloatControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UIBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UIBuilder.Designer.cs">
+      <DependentUpon>UIBuilder.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
