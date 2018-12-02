@@ -58,7 +58,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\IServiceHolder.cs" />
     <Compile Include="Storage\IStorage.cs" />
+    <Compile Include="UIFragment\ClassInt.cs" />
     <Compile Include="UIFragment\IUIPart.cs" />
+    <Compile Include="UIFragment\UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIFragment\UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIFragment\UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
