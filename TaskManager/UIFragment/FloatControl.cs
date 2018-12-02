@@ -11,14 +11,15 @@ using System.Reflection;
 
 namespace TaskManager.UIFragment
 {
-    public partial class UserControl2 : UserControl, IUIPart
+    public partial class FloatControl : UserControl, IUIPart
     {
         Object model;
         PropertyInfo fieldInfo;
-        public UserControl2()
-            {
+        public FloatControl()
+        {
             InitializeComponent();
-            }
+        }
+
         public void SetLabel(string label)
         {
             this.label2.Text = label;
@@ -29,7 +30,7 @@ namespace TaskManager.UIFragment
             this.fieldInfo = fieldInfo;
             this.textBox2.Text = fieldInfo.GetValue(model).ToString();
         }
-        public bool Validate()
+        public new bool Validate()
         {
             if(this.textBox2.Text == "")
             {
@@ -44,7 +45,10 @@ namespace TaskManager.UIFragment
             float value;
             bool chek = float.TryParse(this.textBox2.Text,out value);
 
-            fieldInfo.SetValue(model, value);
+            if (chek)
+            {
+                fieldInfo.SetValue(model, value);
+            }
         }
        
     }

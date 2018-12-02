@@ -1,6 +1,6 @@
 ﻿namespace TaskManager.UIFragment
 {
-    partial class UserControl2
+    partial class FloatControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -35,7 +35,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 98);
+            this.label2.Location = new System.Drawing.Point(13, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 0;
@@ -43,7 +43,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(3, 115);
+            this.textBox2.Location = new System.Drawing.Point(4, 26);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(260, 20);
             this.textBox2.TabIndex = 1;
@@ -55,7 +55,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(267, 159);
+            this.Size = new System.Drawing.Size(267, 57);
             this.ResumeLayout(false);
             this.PerformLayout();
 
