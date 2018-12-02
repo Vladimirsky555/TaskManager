@@ -41,7 +41,7 @@ namespace TaskManager.Service
 
         public bool ClearAll()
         {
-            if (ServiceList == null)
+            if (ServiceList.Count == 0)
             {
                 return false;
             }
