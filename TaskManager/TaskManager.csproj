@@ -57,6 +57,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\IServiceHolder.cs" />
+    <Compile Include="Service\ServiceHolder.cs" />
     <Compile Include="Storage\IStorage.cs" />
     <Compile Include="UIFragment\IUIPart.cs" />
     <EmbeddedResource Include="Form1.resx">
