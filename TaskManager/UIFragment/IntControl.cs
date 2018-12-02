@@ -10,13 +10,13 @@ using System.Windows.Forms;
 using System.Reflection;
 namespace TaskManager.UIFragment
 {
-    public partial class UserControl1 : UserControl, IUIPart
+    public partial class IntControl : UserControl, IUIPart
     {
 
         Object model;
         PropertyInfo fieldInfo;
 
-        public UserControl1()
+        public IntControl()
         {
             InitializeComponent();
         }
@@ -45,12 +45,10 @@ namespace TaskManager.UIFragment
             int value;
             bool chek = int.TryParse(this.textBox1.Text, out value);
 
-            fieldInfo.SetValue(model, value);
-        }
-
-        private void UserControl1_Load(object sender, EventArgs e)
-        {
-
+            if (chek)
+            {
+                fieldInfo.SetValue(model, value);
+            }
         }
     }
 }

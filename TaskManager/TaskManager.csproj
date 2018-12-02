@@ -65,13 +65,12 @@
     <Compile Include="Service\IServiceHolder.cs" />
     <Compile Include="Storage\IStorage.cs" />
     <Compile Include="Storage\Storage.cs" />
-    <Compile Include="UIFragment\Class1.cs" />
     <Compile Include="UIFragment\IUIPart.cs" />
-    <Compile Include="UIFragment\UserControl1.cs">
+    <Compile Include="UIFragment\IntControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIFragment\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="UIFragment\IntControl.Designer.cs">
+      <DependentUpon>IntControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -89,8 +88,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UIFragment\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="UIFragment\IntControl.resx">
+      <DependentUpon>IntControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

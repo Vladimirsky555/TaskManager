@@ -1,6 +1,6 @@
 ﻿namespace TaskManager.UIFragment
 {
-    partial class UserControl1
+    partial class IntControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -56,7 +56,6 @@
             this.Controls.Add(this.label1);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(285, 65);
-            this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
