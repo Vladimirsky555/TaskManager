@@ -73,6 +73,12 @@
     <Compile Include="UIFragment\IntControl.Designer.cs">
       <DependentUpon>IntControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIFragment\UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIFragment\UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="UIFragment\IntControl.resx">
       <DependentUpon>IntControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIFragment\UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
