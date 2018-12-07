@@ -48,6 +48,16 @@ namespace TaskManager.UIFragment
             if (chek)
             {
                 fieldInfo.SetValue(model, value);
+                
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int chek;
+            if(!int.TryParse(this.textBox1.Text,out chek))
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
         }
     }

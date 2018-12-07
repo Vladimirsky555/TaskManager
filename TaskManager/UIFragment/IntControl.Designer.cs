@@ -47,14 +47,15 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(282, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // UserControl1
+            // IntControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "UserControl1";
+            this.Name = "IntControl";
             this.Size = new System.Drawing.Size(285, 65);
             this.ResumeLayout(false);
             this.PerformLayout();
