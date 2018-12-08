@@ -16,6 +16,7 @@ namespace TaskManager.UI
     public partial class UIBuilder : Form
     {
         object model;
+        int i = 0;
         public UIBuilder(object _model)
         {
             InitializeComponent();
@@ -41,11 +42,19 @@ namespace TaskManager.UI
 
                 }
 
-                part.SetLabel("sdafasdf");
+                else if (pInfo.PropertyType == typeof(string))
+                {
+
+                }
+
+
+                MethodInfo[] methods = type.GetMethods();
+
+                //part.SetLabel();
                 part.SetData(model, pInfo);
 
                 UserControl control = (UserControl)part;
-                control.Top = 0;
+                control.Top = i * 50;
                 control.Left = 0;
 
                 Controls.Add(control);
