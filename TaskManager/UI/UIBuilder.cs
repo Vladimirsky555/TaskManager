@@ -36,6 +36,11 @@ namespace TaskManager.UI
                 if (pInfo.PropertyType == typeof(int))
                 {
                     //Создаем соответствующий тип
+                    lbl = "INT";
+                    MethodInfo label = type.GetMethod("SetLabel");
+                    MethodInfo data = type.GetMethod("SetData");
+                    label.Invoke(lbl, new object[0]);
+                    //data.Invoke(model, type.GetProperty(""));
                 }
 
                 else if (pInfo.PropertyType == typeof(float))
@@ -49,7 +54,20 @@ namespace TaskManager.UI
 
                 else if (pInfo.PropertyType == typeof(string))
                 {
+                    lbl = "STRING";
+                    MethodInfo label = type.GetMethod("SetLabel");
+                    MethodInfo data = type.GetMethod("SetData");
+                    label.Invoke(lbl, new object[0]);
+                    //data.Invoke(model, type.GetProperty(""));
+                }
 
+                else if (pInfo.PropertyType == typeof(DateTime))
+                {
+                    lbl = "DATETIME";
+                    MethodInfo label = type.GetMethod("SetLabel");
+                    MethodInfo data = type.GetMethod("SetData");
+                    label.Invoke(lbl, new object[0]);
+                    //data.Invoke(model, type.GetProperty(""));
                 }
 
                 part.SetLabel(lbl);
