@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
+
 namespace TaskManager.UIFragment
 {
     public partial class IntControl : UserControl, IUIPart

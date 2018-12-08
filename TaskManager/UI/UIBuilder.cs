@@ -16,7 +16,6 @@ namespace TaskManager.UI
     public partial class UIBuilder : Form
     {
         object model;
-        int i = 0;
         public UIBuilder(object _model)
         {
             InitializeComponent();
@@ -26,6 +25,8 @@ namespace TaskManager.UI
 
         private void InitFields()
         {
+            int i = 0;
+            string lbl = "";
             Type type = model.GetType();
 
             var parameters = type.GetProperties();
@@ -39,7 +40,11 @@ namespace TaskManager.UI
 
                 else if (pInfo.PropertyType == typeof(float))
                 {
-
+                    lbl = "FLOAT";
+                    MethodInfo label = type.GetMethod("SetLabel");
+                    MethodInfo data = type.GetMethod("SetData");
+                    label.Invoke(lbl, new object[0]);
+                    //data.Invoke(model, type.GetProperty(""));
                 }
 
                 else if (pInfo.PropertyType == typeof(string))
@@ -47,10 +52,7 @@ namespace TaskManager.UI
 
                 }
 
-
-                MethodInfo[] methods = type.GetMethods();
-
-                //part.SetLabel();
+                part.SetLabel(lbl);
                 part.SetData(model, pInfo);
 
                 UserControl control = (UserControl)part;
@@ -59,29 +61,6 @@ namespace TaskManager.UI
 
                 Controls.Add(control);
             }
-
-            //methods = type.GetMethods();
-            //foreach(MethodInfo method in methods)
-            //{
-            //    ParameterInfo[] ps = method.GetParameters();
-
-            //    if (ps.Length == 1)
-            //    {
-            //        ModelAttribute attribute = method.GetCustomAttribute<ModelAttribute>();
-            //        if (attribute != null)
-            //        {
-            //            object[] obj = new object[] { attribute.Label };
-            //            method.Invoke(model, obj);
-            //        }
-            //    }
-
-            //    if(ps.Length == 2)
-            //    {
-            //        PropertyInfo[] fields = type.GetProperties();
-            //        object[] obj = new object[] { model, fields[1] };
-            //        method.Invoke(model, obj);
-            //    }
-            //}
         }
     };
 }
