@@ -9,7 +9,7 @@ namespace TaskManager.Service
 {
     class ServiceHolder : IServiceHolder
     {
-       Dictionary<Type, Object> ServiceList;
+       Dictionary<Type, Object> ServiceList = new Dictionary<Type, object>();
        public  bool RegisterService(Type description, Object service)
         {
             try
