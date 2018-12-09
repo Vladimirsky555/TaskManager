@@ -37,37 +37,41 @@ namespace TaskManager.UI
                 {
                     //Создаем соответствующий тип
                     lbl = "INT";
+                    object[] obj = new object[] { lbl };
                     MethodInfo label = type.GetMethod("SetLabel");
                     MethodInfo data = type.GetMethod("SetData");
-                    label.Invoke(lbl, new object[0]);
-                    //data.Invoke(model, type.GetProperty(""));
+                    label.Invoke(part, obj);
+                    data.Invoke(part, null);
                 }
 
                 else if (pInfo.PropertyType == typeof(float))
                 {
                     lbl = "FLOAT";
+                    object[] obj = new object[] { lbl };
                     MethodInfo label = type.GetMethod("SetLabel");
                     MethodInfo data = type.GetMethod("SetData");
-                    label.Invoke(lbl, new object[0]);
-                    //data.Invoke(model, type.GetProperty(""));
+                    label.Invoke(part, obj);
+                    data.Invoke(part, null);
                 }
 
                 else if (pInfo.PropertyType == typeof(string))
                 {
                     lbl = "STRING";
+                    object[] obj = new object[] { lbl };
                     MethodInfo label = type.GetMethod("SetLabel");
                     MethodInfo data = type.GetMethod("SetData");
-                    label.Invoke(lbl, new object[0]);
-                    //data.Invoke(model, type.GetProperty(""));
+                    label.Invoke(part, obj);
+                    data.Invoke(part, null);
                 }
 
                 else if (pInfo.PropertyType == typeof(DateTime))
                 {
                     lbl = "DATETIME";
+                    object[] obj = new object[] { lbl };
                     MethodInfo label = type.GetMethod("SetLabel");
                     MethodInfo data = type.GetMethod("SetData");
-                    label.Invoke(lbl, new object[0]);
-                    //data.Invoke(model, type.GetProperty(""));
+                    label.Invoke(part, obj);
+                    data.Invoke(part, null);
                 }
 
                 part.SetLabel(lbl);
