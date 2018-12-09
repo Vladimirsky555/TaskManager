@@ -37,6 +37,7 @@ namespace TaskManager.UI
                 {
                     //Создаем соответствующий тип
                     lbl = "INT";
+
                     object[] obj = new object[] { lbl };
                     MethodInfo label = type.GetMethod("SetLabel");
                     MethodInfo data = type.GetMethod("SetData");
