@@ -37,7 +37,6 @@ namespace TaskManager.UI
                 {
                     //Создаем соответствующий тип
                     lbl = "INT";
-
                     object[] obj = new object[] { lbl };
                     MethodInfo label = type.GetMethod("SetLabel");
                     MethodInfo data = type.GetMethod("SetData");
@@ -48,6 +47,7 @@ namespace TaskManager.UI
                 else if (pInfo.PropertyType == typeof(float))
                 {
                     lbl = "FLOAT";
+                    part = new FloatControl();
                     object[] obj = new object[] { lbl };
                     MethodInfo label = type.GetMethod("SetLabel");
                     MethodInfo data = type.GetMethod("SetData");
